@@ -443,6 +443,7 @@ class MyIdMenu: Reactor.Component {
             ", "", function(res=null) {
                 if (!res) return;
                 var id = (res.id || "").trim();
+                var id_udp = (res.id_udp || "").trim();
                 var relay = (res.relay || "").trim();
                 var api = (res.api || "").trim().toLowerCase();
                 var key = (res.key || "").trim();
@@ -465,7 +466,7 @@ class MyIdMenu: Reactor.Component {
                     }
                 }
                 configOptions["custom-rendezvous-server"] = id;
-                configOptions["custom-rendezvous-server-udp"] = id;
+                configOptions["custom-rendezvous-server-udp"] = id_udp;
                 configOptions["relay-server"] = relay;
                 configOptions["api-server"] = api;
                 configOptions["key"] = key;
