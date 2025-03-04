@@ -743,6 +743,9 @@ testDelay();
 
 function getDefaultUri(isRelay: Boolean = false): string {
   const host = localStorage.getItem("custom-rendezvous-server");
+  if (host) {
+    return getrUriFromRs(isRelay ? host : "udp." + host, isRelay);
+  }
   return getrUriFromRs(host || HOST, isRelay);
 }
 
