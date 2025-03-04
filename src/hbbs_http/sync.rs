@@ -198,12 +198,12 @@ async fn start_hbbs_sync_async() {
 fn heartbeat_url() -> String {
     let url = crate::common::get_api_server(
         Config::get_option("api-server"),
-        Config::"udp." + get_option("custom-rendezvous-server"),
+        Config::get_option("custom-rendezvous-server"),
     );
     if url.is_empty() || url.contains("rustdesk.com") {
         return "".to_owned();
     }
-    format!("{}/api/heartbeat", url)
+    format!("udp.{}/api/heartbeat", url)
 }
 
 fn handle_config_options(config_options: HashMap<String, String>) {
