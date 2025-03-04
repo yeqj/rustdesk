@@ -11,7 +11,6 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Audio Input", "Audio input"),
         ("Hardware Codec", "Hardware codec"),
         ("ID Server", "ID server"),
-        ("ID Server udp", "ID server udp"),
         ("Relay Server", "Relay server"),
         ("API Server", "API server"),
         ("invalid_http", "must start with http:// or https://"),
